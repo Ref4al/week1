@@ -33,7 +33,7 @@ if uploaded is not None:
        st.warning("CSV has no headers (no columns detected).")
    if show_preview:
        st.subheader("Preview")
-       st.write(rows[:5])
+       st.dataframe(rows[:5])
    if st.button("Generate report"):
        report = basic_profile(rows)
        st.session_state["report"] = report
